@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>vue test</title>
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{message}}
+            <button v-on:click="fun1">点我</button>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                message:'你好,vueaaaa'
+            },
+            methods:{
+                fun1:function() {
+                    alert('aaaaa');
+                }
+            }
+        });
+    </script>
+</html>
