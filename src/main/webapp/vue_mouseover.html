@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>vue test</title>
+        <script src="js/vue.js"></script>
+        <style type="text/css">
+            div#tatdiv{
+                background-color: blue;
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" :value="msg">
+            <hr/>
+            <div v-on:mouseover="fun3" id="tatdiv">
+                <textarea v-on:mouseover.stop="fun4($event)"></textarea>
+            </div>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                msg:''
+            },
+            methods:{
+                fun3:function() {
+                    this.msg = "1111111"
+                        //alert("11111")
+                },
+                fun4:function(event) {
+                    this.msg = "2222222"
+                    //alert("2222")
+                }
+            }
+        });
+    </script>
+</html>
