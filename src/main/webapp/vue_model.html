@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -7,21 +7,23 @@
     </head>
     <body>
         <div id="app">
-            <button v-on:click="fun1">点我</button>
+            姓名:<input type="text" v-model="user.name"/><BR/>
+            年龄:<input type="text" v-model="user.age"/>
         </div>
     </body>
     <script>
         new Vue({
             el:'#app',
             data:{
-                message:'你好,vueaaaa'
+                msg:'<h2>aaa</h2>',
+                user:{
+                    name:"张三",
+                    age:18
+                }
             },
             methods:{
-                fun2:function(event) {
-                    var keyCode = event.keyCode;
-                    if(keyCode < 48 || keyCode > 57){
-                        event.preventDefault();
-                    }
+                fun1:function() {
+                    alert('aaaaa');
                 }
             }
         });

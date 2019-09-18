@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>vue test</title>
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="(item,index) in arr">
+                    {{index}}-----{{item}}
+                </li>
+            </ul>
+
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>id</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </tr>
+
+                <tr v-for="(student,index) in students">
+                    <th>{{index}}</th>
+                    <th>{{student.id}}</th>
+                    <th>{{student.name}}</th>
+                    <th>{{student.age}}</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                arr:[1,2,3,4,5],
+                students:[
+                    {id:1,name:"zs",age:18},
+                    {id:2,name:"ls",age:25},
+                    {id:3,name:"ww",age:14}
+                ]
+            },
+            methods:{
+                fun1:function() {
+                    alert('aaaaa');
+                }
+            }
+        });
+    </script>
+</html>
